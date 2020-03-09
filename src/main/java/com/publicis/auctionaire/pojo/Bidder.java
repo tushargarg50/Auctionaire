@@ -8,8 +8,6 @@ public class Bidder {
 	private final Bid bid;
 
 	public Bidder(String bidderName, Bid bid) {
-		Objects.requireNonNull(bidderName);
-		Objects.requireNonNull(bid);
 		this.bidderName = bidderName;
 		this.bid = bid;
 	}

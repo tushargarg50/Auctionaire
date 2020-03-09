@@ -12,10 +12,6 @@ public class Bid {
 	private final LocalDateTime bidTime;
 
 	public Bid(BigDecimal startingBid, BigDecimal maxBid, BigDecimal autoIncrementAmount, LocalDateTime bidTime) {
-		Objects.requireNonNull(startingBid);
-		Objects.requireNonNull(maxBid);
-		Objects.requireNonNull(autoIncrementAmount);
-		Objects.requireNonNull(bidTime);
 		this.startingBid = startingBid;
 		this.maxBid = maxBid;
 		this.autoIncrementAmount = autoIncrementAmount;

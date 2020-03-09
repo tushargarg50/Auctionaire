@@ -7,7 +7,6 @@ public class Item {
 	private final String itemName;
 
 	public Item(String itemName) {
-		Objects.requireNonNull(itemName);
 		this.itemName = itemName;
 	}
 
