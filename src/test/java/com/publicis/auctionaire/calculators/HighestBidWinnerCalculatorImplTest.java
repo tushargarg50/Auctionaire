@@ -10,20 +10,20 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.publicis.auctionaire.calculators.HighestBidWinnerCalculator;
+import com.publicis.auctionaire.calculators.HighestBidWinnerCalculatorImpl;
 import com.publicis.auctionaire.calculators.WinnerCalculator;
 import com.publicis.auctionaire.pojo.Bid;
 import com.publicis.auctionaire.pojo.Bidder;
 import com.publicis.auctionaire.pojo.Item;
 import com.publicis.auctionaire.pojo.Winner;;
 
-public class HighestBidWinnerCalculatorTest {
+public class HighestBidWinnerCalculatorImplTest {
 	
 	private WinnerCalculator winnerCalculator;
 	
 	@Before
 	public void init() {
-		winnerCalculator = new HighestBidWinnerCalculator();
+		winnerCalculator = new HighestBidWinnerCalculatorImpl();
 	}
 	
 	@Test(expected=NullPointerException.class)

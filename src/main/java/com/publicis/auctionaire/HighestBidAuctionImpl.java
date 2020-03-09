@@ -7,11 +7,11 @@ import com.publicis.auctionaire.pojo.Bidder;
 import com.publicis.auctionaire.pojo.Item;
 import com.publicis.auctionaire.pojo.Winner;
 
-public class HighestBidAuction implements Auction {
+public class HighestBidAuctionImpl implements Auction {
 	
 	private final WinnerCalculator winnerCalculator;
 	
-	public HighestBidAuction(WinnerCalculator winnerCalculator) {
+	public HighestBidAuctionImpl(WinnerCalculator winnerCalculator) {
 		this.winnerCalculator = winnerCalculator;
 	}
 

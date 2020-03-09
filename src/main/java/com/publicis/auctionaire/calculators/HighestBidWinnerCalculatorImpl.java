@@ -10,7 +10,7 @@ import com.publicis.auctionaire.pojo.Bidder;
 import com.publicis.auctionaire.pojo.Item;
 import com.publicis.auctionaire.pojo.Winner;
 
-public class HighestBidWinnerCalculator implements WinnerCalculator {
+public class HighestBidWinnerCalculatorImpl implements WinnerCalculator {
 
 	@Override
 	public int compare(Bidder bidder1, Bidder bidder2) {

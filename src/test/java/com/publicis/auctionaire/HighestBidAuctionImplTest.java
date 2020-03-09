@@ -1,8 +1,6 @@
 package com.publicis.auctionaire;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyListOf;
 import static org.mockito.Mockito.when;
@@ -12,7 +10,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -26,32 +23,13 @@ import com.publicis.auctionaire.pojo.Item;
 import com.publicis.auctionaire.pojo.Winner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class AuctionTest {
-
-	private AuctionFactory auctionFactory;
+public class HighestBidAuctionImplTest {
 
 	@InjectMocks
-	private HighestBidAuction auction;
+	private HighestBidAuctionImpl auction;
 
 	@Mock
 	private WinnerCalculator winnerCalculator;
-
-	@Before
-	public void init() {
-		auctionFactory = new AuctionFactoryImpl();
-	}
-
-	@Test
-	public void createAuction() throws Exception {
-		Auction auction = auctionFactory.createAuction("highestBid");
-		assertNotNull(auction);
-	}
-	
-	@Test
-	public void createAuctionFail() throws Exception {
-		Auction auction = auctionFactory.createAuction("ABC");
-		assertNull(auction);
-	}
 
 	@Test
 	public void testGetWinnerForBicycle() throws Exception {
